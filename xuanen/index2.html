@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>layout 后台大布局 - Layui</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="css/layui.css" media="all">
+    <link rel="stylesheet" href="css/style.css" media="all">
+</head>
+
+<body>
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo">档案数字管理系统</div>
+
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item">
+                    <a href="">
+                            <i class="layui-icon">&#xe698;</i>
+                        </a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">
+                        <i class="layui-icon">&#xe60a;</i><span class="layui-badge">9</span>
+                    </a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">
+                        <i class="layui-icon">&#xe63a;</i>
+                    </a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">
+                        <i class="layui-icon">&#xe603;</i>
+                    </a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">
+                        <i class="layui-icon">&#xe602;</i>
+                    </a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">归档接收</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">待审批</a></dd>
+                        <dd><a href="">已审批</a></dd>
+                        <dd><a href="">归档日志</a></dd>
+                        <dd><a href="">直接归档记录</a></dd>
+                        <dd><a href="">所有直接归档记录</a></dd>
+                        <dd><a href="">所有待审批</a></dd>
+                        <dd><a href="">所有已审批</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">利用中心</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">全文检索</a></dd>
+                        <dd><a href="">档案发布</a></dd>
+                        <dd><a href="">借阅管理</a></dd>
+                        <dd><a href="">档案统计</a></dd>
+                        <dd><a href="">档案销毁管理</a></dd>
+                        <dd><a href="">编研库</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">系统设置</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">库管理</a></dd>
+                        <dd><a href="">权限管理</a></dd>
+                        <dd><a href="">日志管理</a></dd>
+                        <dd><a href="">全文检索管理</a></dd>
+                        <dd><a href="">数据词典</a></dd>
+                        <dd><a href="">RFID标签管理</a></dd>
+                        <dd><a href="">数据管理</a></dd>
+                        <dd><a href="">水印管理</a></dd>
+                        <dd><a href="">任务设置</a></dd>
+                        <dd><a href="">发布管理</a></dd>
+                        <dd><a href="">打印模板</a></dd>
+                        <dd><a href="">OA办公</a></dd>
+                        <dd><a href="">系统集成</a></dd>
+                        <dd><a href="">系统参数设置</a></dd>
+                    </dl>
+                </li>
+
+                <li class="layui-nav-item">
+                    <a href="javascript:;">
+                         jack****@qq.com
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">我的借阅记录</a></dd>
+                        <dd><a href="">用户信息管理</a></dd>
+                        <dd><a href="">我的借阅车</a></dd>
+                        <dd><a href="">在线订阅</a></dd>
+                        <dd><a href="">收藏夹</a></dd>
+                        <dd><a href="">订阅夹</a></dd>
+                        <dd><a href="">我的下载</a></dd>
+                        <dd><a href="">我的检索</a></dd>
+                        <dd><a href="">我的工作情况</a></dd>
+                        <dd><a href="">我的发布</a></dd>
+                        <dd><a href="">个人信息</a></dd>
+                        <dd><a href="">修改密码</a></dd>
+                        <dd><a href="">注销</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a class="" href="javascript:;">预立卷</a>
+                        <div class="layui-nav-child">
+                            <div class="side-menu-wrap">
+                                <ul id="side-menu-ul"></ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">整理库</a>
+                        <div class="layui-nav-child">
+                            <div class="side-menu-wrap">
+                                <ul id="side-menu-ul2"></ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">档案库</a>
+                        <div class="layui-nav-child">
+                            <div class="side-menu-wrap">
+                                <ul id="side-menu-ul3"></ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="layui-body">
+            <!-- 内容主体区域 -->
+            <div style="padding: 15px;">
+
+                <div class="summary-title">
+                    <h5>综述</h5>
+                </div>
+
+                <table class="summary-apply-wrap">
+                    <tr>
+                        <td width="33%">借阅审批<span class="sm-qty">0</span></td>
+                        <td width="33%">归档审批<span class="sm-qty">0</span></td>
+                        <td width="33%">利用审批<span class="sm-qty">0</span></td>
+                    </tr>
+                </table>
+
+                <div class="summary-title">
+                    <h5>常用操作</h5>
+                </div>
+
+                <div class="layui-fluid" style="padding: 0;">
+                    <div class="layui-row">
+                        <div class="layui-col-xs6">
+                            <div class="summary-detail-box" style="margin-right: 15px;">
+                                <div class="box-title-bar">
+                                    <span class="pl">功能操作</span>
+                                    <span class="pr"><i class="layui-icon">&#xe620;</i></span>
+                                </div>
+                                <div class="box-content">
+                                    <a href="" class="layui-btn layui-btn-small layui-btn-primary">我的下载</a>
+                                    <a href="" class="layui-btn layui-btn-small layui-btn-primary">我的检索</a>
+                                    <a href="" class="layui-btn layui-btn-small layui-btn-primary">我的工作情况</a>
+                                    <a href="" class="layui-btn layui-btn-small layui-btn-primary">电子借阅</a>
+                                    <a href="" class="layui-btn layui-btn-small layui-btn-primary">实物借阅</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-col-xs6">
+                            <div class="summary-detail-box">
+                                <div class="box-title-bar">
+                                    <span class="pl">库操作</span>
+                                    <span class="pr"><i class="layui-icon">&#xe620;</i></span>
+                                </div>
+                                <div class="box-content">
+                                    <a href="" class="layui-btn layui-btn-small layui-btn-primary">文书档案</a>
+                                    <a href="" class="layui-btn layui-btn-small layui-btn-primary">案卷目录</a>
+                                    <a href="" class="layui-btn layui-btn-small layui-btn-primary">卷内目录</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="summary-title">
+                    <h5>全文检索</h5>
+                </div>
+
+                <div style="text-align: center;background-color: #f5f5f5;padding: 30px;">
+                    <img src="images/1.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-footer">
+            <!-- 底部固定区域 -->
+            © qq.com - 底部固定区域
+        </div>
+    </div>
+    <script src="layui.js" charset="utf-8"></script>
+    <script>
+        //JavaScript代码区域
+        layui.use('element', function () {
+            var element = layui.element;
+        });
+    </script>
+    <!-- <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_30088308'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "w.cnzz.com/c.php%3Fid%3D30088308' type='text/javascript'%3E%3C/script%3E"));
+    </script> -->
+
+
+    <script>
+        //Demo
+        layui.use(['tree', 'layer'], function () {
+            var layer = layui.layer
+                , $ = layui.jquery;
+
+            layui.tree({
+                elem: '#side-menu-ul' //指定元素
+                , target: '_blank' //是否新选项卡打开（比如节点返回href才有效）
+                , nodes: [ //节点
+                    {
+                        name: '案卷目录'
+                        , id: 1
+                        , alias: 'changyong'
+                    }, {
+                        name: '卷内目录'
+                        , id: 2
+                        , alias: 'jiannei'
+                    }, {
+                        name: '教学档案'
+                        , id: 3
+                        , spread: false
+                        , children: [
+                            {
+                                name: '教务综合',
+                                id: 31
+                            },
+                            {
+                                name: '学科与实验室建设',
+                                id: 32
+                            },
+                            {
+                                name: '招生',
+                                id: 33
+                            },
+                            {
+                                name: '成绩单',
+                                id: 34
+                            },
+                            {
+                                name: '教学、实践、实习',
+                                id: 35
+                            },
+                            {
+                                name: '学位',
+                                id: 36
+                            },
+                            {
+                                name: '毕业',
+                                id: 37
+                            },
+                            {
+                                name: '教材',
+                                id: 38
+                            },
+                            {
+                                name: '就业毕业生（派遣名册）',
+                                id: 39
+                            },
+                            {
+                                name: '就业综合',
+                                id: 40
+                            },
+                            {
+                                name: '研究生业务档案'
+                                , id: 21
+                                , spread: false
+                                , children: [
+                                    {
+                                        name: '业务档案（卷）'
+                                        , id: 211
+                                        , children: [
+                                            {
+                                                name: '案卷目录'
+                                                , id: 2111
+                                            }, {
+                                                name: '卷内目录'
+                                                , id: 2112
+                                            }
+                                        ]
+                                    }, {
+                                        name: '学位（件）'
+                                        , id: 212
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                    , {
+                        name: '科研档案'
+                        , id: 3
+                        , alias: 'changyong'
+                        , children: [
+                            {
+                                name: '爱情动作片'
+                                , id: 31
+                                , alias: 'love'
+                            }, {
+                                name: '技术栈'
+                                , id: 12
+                                , children: [
+                                    {
+                                        name: '前端'
+                                        , id: 121
+                                    }
+                                    , {
+                                        name: '全端'
+                                        , id: 122
+                                    }
+                                ]
+                            }
+                        ]
+                    }, {
+                        name: '科研档案'
+                        , id: 3
+                        , alias: 'changyong'
+                        , children: [
+                            {
+                                name: '爱情动作片'
+                                , id: 31
+                                , alias: 'love'
+                            }, {
+                                name: '技术栈'
+                                , id: 12
+                                , children: [
+                                    {
+                                        name: '前端'
+                                        , id: 121
+                                    }
+                                    , {
+                                        name: '全端'
+                                        , id: 122
+                                    }
+                                ]
+                            }
+                        ]
+                    }, {
+                        name: '产品档案'
+                        , id: 3
+                        , alias: 'changyong'
+                        , children: [
+                            {
+                                name: '爱情动作片'
+                                , id: 31
+                                , alias: 'love'
+                            }, {
+                                name: '技术栈'
+                                , id: 12
+                                , children: [
+                                    {
+                                        name: '前端'
+                                        , id: 121
+                                    }
+                                    , {
+                                        name: '全端'
+                                        , id: 122
+                                    }
+                                ]
+                            }
+                        ]
+                    }, {
+                        name: '基建档案'
+                        , id: 3
+                        , alias: 'changyong'
+                        , children: [
+                            {
+                                name: '爱情动作片'
+                                , id: 31
+                                , alias: 'love'
+                            }, {
+                                name: '技术栈'
+                                , id: 12
+                                , children: [
+                                    {
+                                        name: '前端'
+                                        , id: 121
+                                    }
+                                    , {
+                                        name: '全端'
+                                        , id: 122
+                                    }
+                                ]
+                            }
+                        ]
+                    }, {
+                        name: '仪器设备档案'
+                        , id: 3
+                        , alias: 'changyong'
+                        , children: [
+                            {
+                                name: '爱情动作片'
+                                , id: 31
+                                , alias: 'love'
+                            }, {
+                                name: '技术栈'
+                                , id: 12
+                                , children: [
+                                    {
+                                        name: '前端'
+                                        , id: 121
+                                    }
+                                    , {
+                                        name: '全端'
+                                        , id: 122
+                                    }
+                                ]
+                            }
+                        ]
+                    }, {
+                        name: '出版档案'
+                        , id: 3
+                        , alias: 'changyong'
+                        , children: [
+                            {
+                                name: '爱情动作片'
+                                , id: 31
+                                , alias: 'love'
+                            }, {
+                                name: '技术栈'
+                                , id: 12
+                                , children: [
+                                    {
+                                        name: '前端'
+                                        , id: 121
+                                    }
+                                    , {
+                                        name: '全端'
+                                        , id: 122
+                                    }
+                                ]
+                            }
+                        ]
+                    }, {
+                        name: '外事档案'
+                        , id: 3
+                        , alias: 'changyong'
+                        , children: [
+                            {
+                                name: '爱情动作片'
+                                , id: 31
+                                , alias: 'love'
+                            }, {
+                                name: '技术栈'
+                                , id: 12
+                                , children: [
+                                    {
+                                        name: '前端'
+                                        , id: 121
+                                    }
+                                    , {
+                                        name: '全端'
+                                        , id: 122
+                                    }
+                                ]
+                            }
+                        ]
+                    }, {
+                        name: '财会档案'
+                        , id: 3
+                        , alias: 'changyong'
+                        , children: [
+                            {
+                                name: '爱情动作片'
+                                , id: 31
+                                , alias: 'love'
+                            }, {
+                                name: '技术栈'
+                                , id: 12
+                                , children: [
+                                    {
+                                        name: '前端'
+                                        , id: 121
+                                    }
+                                    , {
+                                        name: '全端'
+                                        , id: 122
+                                    }
+                                ]
+                            }
+                        ]
+                    }, {
+                        name: '声像档案'
+                        , id: 3
+                        , alias: 'changyong'
+                        , children: [
+                            {
+                                name: '爱情动作片'
+                                , id: 31
+                                , alias: 'love'
+                            }, {
+                                name: '技术栈'
+                                , id: 12
+                                , children: [
+                                    {
+                                        name: '前端'
+                                        , id: 121
+                                    }
+                                    , {
+                                        name: '全端'
+                                        , id: 122
+                                    }
+                                ]
+                            }
+                        ]
+                    }, {
+                        name: '人物档案'
+                        , id: 3
+                        , alias: 'changyong'
+                        , children: [
+                            {
+                                name: '爱情动作片'
+                                , id: 31
+                                , alias: 'love'
+                            }, {
+                                name: '技术栈'
+                                , id: 12
+                                , children: [
+                                    {
+                                        name: '前端'
+                                        , id: 121
+                                    }
+                                    , {
+                                        name: '全端'
+                                        , id: 122
+                                    }
+                                ]
+                            }
+                        ]
+                    }, {
+                        name: '历史档案'
+                        , id: 3
+                        , alias: 'changyong'
+                        , children: [
+                            {
+                                name: '爱情动作片'
+                                , id: 31
+                                , alias: 'love'
+                            }, {
+                                name: '技术栈'
+                                , id: 12
+                                , children: [
+                                    {
+                                        name: '前端'
+                                        , id: 121
+                                    }
+                                    , {
+                                        name: '全端'
+                                        , id: 122
+                                    }
+                                ]
+                            }
+                        ]
+                    }, {
+                        name: '实物档案'
+                        , id: 3
+                        , alias: 'changyong'
+                        , children: [
+                            {
+                                name: '爱情动作片'
+                                , id: 31
+                                , alias: 'love'
+                            }, {
+                                name: '技术栈'
+                                , id: 12
+                                , children: [
+                                    {
+                                        name: '前端'
+                                        , id: 121
+                                    }
+                                    , {
+                                        name: '全端'
+                                        , id: 122
+                                    }
+                                ]
+                            }
+                        ]
+                    }, {
+                        name: '口述档案'
+                        , id: 3
+                        , alias: 'changyong'
+                        , children: [
+                            {
+                                name: '爱情动作片'
+                                , id: 31
+                                , alias: 'love'
+                            }, {
+                                name: '技术栈'
+                                , id: 12
+                                , children: [
+                                    {
+                                        name: '前端'
+                                        , id: 121
+                                    }
+                                    , {
+                                        name: '全端'
+                                        , id: 122
+                                    }
+                                ]
+                            }
+                        ]
+                    }, {
+                        name: '行政档案'
+                        , id: 3
+                        , alias: 'changyong'
+                        , children: [
+                            {
+                                name: '爱情动作片'
+                                , id: 31
+                                , alias: 'love'
+                            }, {
+                                name: '技术栈'
+                                , id: 12
+                                , children: [
+                                    {
+                                        name: '前端'
+                                        , id: 121
+                                    }
+                                    , {
+                                        name: '全端'
+                                        , id: 122
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>
