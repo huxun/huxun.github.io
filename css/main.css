@@ -1,0 +1,94 @@
+.img-partner{width: 100%;height: auto;}
+.partner-projects, .partner-company{padding: 20px 40px;color: #fff;}
+
+.partner-projects h2,
+.partner-company h2 {margin-bottom: 20px;}
+.partner-projects {background-color: #0D376E;}
+.partner-company {height: 245px;background-color: #257EC2;}
+img {max-width: 100%;}
+
+.table.table-js{border-collapse: separate;border-spacing: 2px;text-align: center;}
+.table.table-js tbody td {background-color: #E8F3FA;border-width: 0;}
+.table.table-js thead td {color: #fff;background-color: #0B3875;border-width: 0;}
+
+.navbar {margin-bottom: 0;}
+#map{width:100%;height:400px;}
+.banner{margin-bottom: 40px;position: relative;z-index: 1;height: 400px;background: none no-repeat top center;}
+.banner-title,
+.banner-sub{position: absolute;top: 50%;left: 0;right: 0;text-align: center;color: #FFF;}
+.banner-title{font-size: 38px;margin-top: -40px;letter-spacing:4px;}
+.banner-sub{font-size: 16px;margin-top: 30px;}
+
+.home-banner .banner-title{margin-top: -200px;}
+
+.table.table-contact .glyphicon{margin-right: 4px;}
+.table.table-contact th{font-weight: normal;width: 120px;}
+.table.table-contact td,
+.table.table-contact th{border-width: 0;}
+
+#news-contact th{width: 20px;}
+
+#footer{padding: 20px 0;margin-top: 30px;text-align: center;background-color:#f9f9f9;color: #757575;}
+.page-title{font-size: 26px;}
+.page-heading{font-size: 16px;color: #257EC2;margin-bottom: 30px;}
+
+h2{font-size: 22px;}
+.section{margin-bottom: 50px;}
+.tc{text-align: center;}
+.tl{text-align: left;}
+.tr{text-align: right;}
+.mb0{margin-bottom: 0 !important;}
+
+.product-list a{color: #333;margin-bottom: 30px;display: block;}
+.product-list a:hover img{border-color: #257EC2;}
+.product-list a:hover{text-decoration: none;color: #257EC2;}
+.product-detail{max-width: 740px;}
+
+
+.product-banner{padding: 100px 0 50px;margin-bottom: 40px;height: 400px;background: none no-repeat right center;background-size: cover;}
+.product-banner .page-heading,
+.product-banner .page-title,
+.product-banner .product-detail{color: #fff;}
+
+.dgfsj-banner{background-image: url(../img/product-hd.jpg);}
+.dgpmj-banner{background-image: url(../img/case-hd.jpg);}
+.stdwyz-banner{background-image: url(../img/bs-banner.jpg);background-size: cover;}
+.bsdwyz-banner{background-image: url(../img/bsdwyz-banner.jpg);background-size: cover;}
+.zyxtrhz-banner{background-image: url(../img/zyxtrhz-banner.jpg);background-size: cover;}
+.zzcmfyz-banner{background-image: url(../img/banner.jpg);background-size: cover;}
+.about-banner{background-image: url(../img/about.jpg);background-size: cover;}
+.contact-banner{background-image: url(../img/contact.jpg);background-size: cover;}
+.home-banner{background-image: url(../img/home.jpg);background-size: cover;height: 760px;}
+
+#header-nav{position: absolute;top: 0;left: 0;right: 0;z-index: 10;background-color: transparent;border-width: 0;color: #fff;background-image: none;box-shadow: none;}
+#header-nav a{color: #fff;}
+
+.news-list li{clear: both;height: 32px;}
+.news-list a{color: #333;float: left;}
+.news-list a:hover{text-decoration: none;color: #337ab7;}
+.news-list .news-public-date{float: right;}
+
+.section-title{text-align: center;}
+.section .divider{text-align: center;margin-bottom: 30px;}
+.section .divider span{display: inline-block;width: 50px;height:2px;background-color: #333;}
+
+.section-case .img-thumbnail,
+.section-partner .img-thumbnail{width: 240px;height: 180px;text-align: center;}
+.dropdown-menu,
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover{background-color: rgba(14, 14, 14, 0.7);background-image: none;}
+#header-nav .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{background-color: transparent;background-image: none;}
+
+#header-nav a:hover,
+#header-nav a:focus{color: #0989c5 !important;}
+
+#header-nav .navbar-right .dropdown-menu {right: auto;left: 0;}
+
+.dropdown-menu{border-width: 0;min-width: 180px;}
+.dropdown-menu>li>a{padding-top: 12px;padding-bottom: 12px;}
+#header-nav .navbar, #header-nav .nav>li>a{text-shadow: none;box-shadow: none;}
+
+.partner-banner{background-image: url(../img/partner.jpg);background-size: cover;}
+.news-banner{background-image: url(../img/news.jpg);background-size: cover;}
+
